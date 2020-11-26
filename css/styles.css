@@ -7,16 +7,20 @@ html {
   scroll-behavior: smooth;
 }
 
-body, .footer {
+body, .navbar {
   background-color: #e6e6e6;
 }
 
-main {
-  padding: auto;
+.footer,
+#navbarBasicExample {
+  background-color: #e6e6e6;
 }
 
-.navbar {
-  background-color: #e6e6e6;
+@media (max-width: 1024px) {
+  .footer,
+  #navbarBasicExample {
+    background-color: #d4d4d4;
+  }
 }
 
 .navbar-start {
@@ -42,21 +46,19 @@ a {
 /* Slideshow container */
 #slideshow {
   max-width: 90%;
-  max-height: 500px;
+  max-height: 60vh;
   position: relative;
   overflow: hidden;
   margin: auto;
   border-radius: 1rem;
 }
 
-.slides {
-  max-width:100%;
-  max-height:100%;
-  display: block;
-}
-
 .slides > img {
-  object-fit:cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+
 }
 
 /* Caption text */
