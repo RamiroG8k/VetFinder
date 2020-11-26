@@ -32,13 +32,6 @@ body, .navbar {
   margin: 0;
 }
 
-nav > ul,
-footer > ul {
-  padding: 1rem;
-  display: flex;
-  justify-content: space-around;
-}
-
 a {
   font-weight: 600;
 }
