@@ -7,8 +7,28 @@ html {
   scroll-behavior: smooth;
 }
 
-body, .navbar {
+body,
+.navbar {
   background-color: #e6e6e6;
+}
+
+.hero {
+  border-radius: 1rem;
+}
+
+.hero.has-background {
+  position: relative;
+  overflow: hidden;
+}
+.hero-background {
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+.hero-background.is-transparent {
+  opacity: 0.4;
 }
 
 .footer,
@@ -51,7 +71,6 @@ a {
   max-height: 100%;
   object-fit: cover;
   object-position: center;
-
 }
 
 /* Caption text */
@@ -81,11 +100,35 @@ a {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.has-background-vet{
+  background-color: #b878e294;
+  border-radius: 1rem;
+}
+
+.is-violet{
+  border-color: #b878e2;
+  color: #b878e2;
+}
+
+.is-violet:hover {
+  border-color: #b878e2;
+  background-color: #b878e2;
+  color: white;
 }

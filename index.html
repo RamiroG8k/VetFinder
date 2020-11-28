@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=W, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta tags to SEO positioning -->
     <meta name="description" content="Dedicated page comitted to help you find your pet" />
     <meta name="keywords" content="web, vet, pets, dog, cat, bulma, html, template, javascript" />
@@ -17,10 +17,12 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
     <script src="https://kit.fontawesome.com/3a84c50d6a.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+    <script src="js/navbar.js"></script>
     <title>VetFinder</title>
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar container" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
@@ -69,14 +71,36 @@
             </div>
 
             <div class="navbar-end">
-                <a class="navbar-item">Acerca</a>
+                <a class="navbar-item" onclick="toggleModal()">Acerca</a>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-background" onclick="toggleModal()"></div>
+            <div class="modal-content">
+                <article class="message">
+                    <div class="message-header">
+                        <p>Hello World</p>
+                        <button class="delete" aria-label="delete" onclick="toggleModal()"></button>
+                    </div>
+                    <div class="message-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>,
+                        tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam
+                        gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend
+                            lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna
+                        tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis
+                        sodales sem.
+                    </div>
+                </article>
             </div>
         </div>
     </nav>
+    <!-- END -->
+
+    <!-- Main Content -->
     <main>
-        <!-- Slideshow container -->
         <section class="section">
             <div class="container">
+                <!-- Slideshow container -->
                 <div id="slideshow">
                     <div class="slides fade">
                         <p class="numbertext">1 / 3</p>
@@ -117,9 +141,199 @@
                         </div>
                     </div>
                 </div>
+                <!-- END -->
+
+                <hr class="has-background-vet">
+
+                <!-- Mision -->
+                <div class="columns">
+                    <div class="column is-one-quarter">
+                        <h1 class="title is-violet">
+                            Mision
+                        </h1>
+                        <h2 class="subtitle">
+                            Slogan
+                        </h2>
+                    </div>
+                    <div class="column">
+                        <h2 class="subtitle">
+                            How it will happen
+                        </h2>
+                        <p class="content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Maxime alias minus natus ex error nesciunt ipsam ratione?
+                            Assumenda nesciunt rerum sunt totam, sapiente vitae,
+                            unde velit amet dolores necessitatibus nobis.
+                        </p>
+                    </div>
+                </div>
+                <div class="hero is-medium has-background">
+                    <img src="assets/img/pet-5.webp" alt="Something" class="hero-background is-transparent">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Primary title
+                            </h1>
+                            <h2 class="subtitle">
+                                Primary subtitle
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- END -->
+
+                <br>
+
+                <!-- Vision -->
+                <div class="columns has-text-right">
+                    <div class="column">
+                        <h2 class="subtitle">
+                            How it will happen
+                        </h2>
+                        <p class="content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Maxime alias minus natus ex error nesciunt ipsam ratione?
+                            Assumenda nesciunt rerum sunt totam, sapiente vitae,
+                            unde velit amet dolores necessitatibus nobis.
+                        </p>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <h1 class="title is-violet">
+                            Vision
+                        </h1>
+                        <h2 class="subtitle">
+                            Slogan
+                        </h2>
+                    </div>
+                </div>
+                <div class="hero is-medium has-background">
+                    <img src="assets/img/pet-3.webp" alt="Something" class="hero-background is-transparent">
+                    <div class="hero-body">
+                        <div class="container has-text-right">
+                            <h1 class="title">
+                                Primary title
+                            </h1>
+                            <h2 class="subtitle">
+                                Primary subtitle
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- END -->
+
+                <hr class="has-background-grey-lighter">
+
+                <div class="commitment has-text-centered has-background-vet">
+                    <h1 class="title py-4 has-text-white">
+                        Our commitment
+                    </h1>
+                    <p class="subtitle has-text-white p-4">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Eos odio,
+                        consequuntur expedita vero labore pariatur!
+                        Quis nemo officiis sequi similique doloremque,
+                        mollitia voluptates, error, consectetur maiores id tempore cumque enim.
+                    </p>
+                    <br>
+                </div>
+
+                <br>
+
+                <!-- Latest Uploads -->
+                <div class="latest has-text-centered">
+                    <h1 class="title">
+                        Latest uploads
+                    </h1>
+                    <h2 class="subtitle">
+                        Help looking around for these pets
+                    </h2>
+
+                    <div class="columns">
+                        <div class="card column m-4">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-1.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div>
+                                    <div class="has-text-left">
+                                        <span class="tag is-info">Cat</span>
+                                        <span class="tag is-success">Success</span>
+                                        <span class="tag is-warning">Reward</span>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <a href="founds.html" class="button is-small is-fullwidth is-violet is-outlined">Got
+                                            Info!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card column m-4">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-2.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-success">Success</span>
+                                    <span class="tag is-warning">Reward</span>
+                                    <span class="tag is-danger">Sick</span>
+                                </div>
+                                <br>
+                                <div>
+                                    <a href="founds.html" class="button is-small is-fullwidth is-violet is-outlined">Got
+                                        Info!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card column m-4">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-4.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-primary">Small</span>
+                                    <span class="tag is-warning">Reward</span>
+                                </div>
+                                <br>
+                                <div>
+                                    <a href="founds.html" class="button is-small is-fullwidth is-violet is-outlined">Got
+                                        Info!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END -->
             </div>
         </section>
     </main>
+    <!-- END -->
+
+    <!-- Footer -->
     <footer class="footer columns m-0">
         <div class="has-text-right column">
             <a href="#">
@@ -132,18 +346,20 @@
         <div class="column">
             <ul>
                 <li>
-                    <a href="https://www.instagram.com/xifra_latinoamerica/" target="_blank"><i
-                            class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.instagram.com/cesardanielvg/" target="_blank"><i class="fab fa-instagram"></i>
+                        Instagram</a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/xifralifestyle" target="_blank"><i class="fab fa-facebook"></i>
+                    <a href="https://www.facebook.com/Cesar.Vergara.25" target="_blank"><i class="fab fa-facebook"></i>
                         Facebook</a>
                 </li>
-                <li><a href="https://www.facebook.com/xifralifestyle" target="_blank"><i class="fab fa-linkedin"></i>
+                <li><a href="https://www.linkedin.com/in/césar-daniel-vergara-guerrero-68617088/" target="_blank"><i
+                            class="fab fa-linkedin"></i>
                         Linkedin</a< /li>
             </ul>
         </div>
     </footer>
+    <!-- END -->
 </body>
 
 </html>

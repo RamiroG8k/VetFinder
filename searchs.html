@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=W, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta tags to SEO positioning -->
     <meta name="description" content="Dedicated page comitted to help you find your pet" />
     <meta name="keywords" content="web, vet, pets, dog, cat, bulma, html, template, javascript" />
@@ -16,11 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
     <script src="https://kit.fontawesome.com/3a84c50d6a.js" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    <script src="js/navbar.js"></script>
     <title>VetFinder</title>
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar container" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
@@ -54,7 +55,7 @@
                         <a class="navbar-item">
                             En adopcion
                         </a>
-                        <a class="navbar-item">
+                        <a href="founds.html" class="navbar-item">
                             He encontrado!
                         </a>
                         <a class="navbar-item">
@@ -69,18 +70,192 @@
             </div>
 
             <div class="navbar-end">
-                <a class="navbar-item">Acerca</a>
+                <a class="navbar-item" onclick="toggleModal()">Acerca</a>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-background" onclick="toggleModal()"></div>
+            <div class="modal-content">
+                <article class="message">
+                    <div class="message-header">
+                        <p>Hello World</p>
+                        <button class="delete" aria-label="delete" onclick="toggleModal()"></button>
+                    </div>
+                    <div class="message-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>,
+                        tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam
+                        gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend
+                            lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna
+                        tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis
+                        sodales sem.
+                    </div>
+                </article>
             </div>
         </div>
     </nav>
+    <!-- END -->
+
+    <!-- Main Content -->
     <main>
-        <!-- Slideshow container -->
         <section class="section">
             <div class="container">
-                
+                <!-- Hero -->
+                <div class="hero is-medium has-background">
+                    <img src="assets/img/pet-5.webp" alt="Something" class="hero-background is-transparent">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Primary title
+                            </h1>
+                            <h2 class="subtitle">
+                                Primary subtitle
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- END -->
+
+                <hr class="has-background-grey-lighter">
+
+                <!-- Cards -->
+                <div class="latest has-text-centered">
+                    <h1 class="title">
+                        Have you seen them?
+                    </h1>
+                    <h2 class="subtitle">
+                        Help looking around for these pets
+                    </h2>
+
+                    <div class="columns is-multiline is-centered">
+                        <div class="card column m-4 is-one-quarter">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-1.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-info">Cat</span>
+                                    <span class="tag is-success">Success</span>
+                                    <span class="tag is-warning">Reward</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="founds.html" class="button is-small is-fullwidth is-violet is-outlined">Got
+                                    Info!</a>
+                            </div>
+                        </div>
+                        <div class="card column m-4 is-one-quarter">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-2.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-success">Success</span>
+                                    <span class="tag is-warning">Reward</span>
+                                    <span class="tag is-danger">Sick</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card column m-4 is-one-quarter">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-4.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-primary">Small</span>
+                                    <span class="tag is-warning">Reward</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card column m-4 is-one-quarter">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/1.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-primary">Small</span>
+                                    <span class="tag is-warning">Reward</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card column m-4 is-one-quarter">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/3.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-primary">Small</span>
+                                    <span class="tag is-warning">Reward</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card column m-4 is-one-quarter">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/pet-5.webp" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Name: </strong>Lorem</p>
+
+                                <p><strong>Last seen: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris.</p>
+                                <p>Please call: <strong>33-2233-4455</strong></p>
+                                <br>
+                                <div class="has-text-left">
+                                    <span class="tag is-primary">Small</span>
+                                    <span class="tag is-warning">Reward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END -->
             </div>
         </section>
     </main>
+    <!-- END -->
+
+    <!-- Footer -->
     <footer class="footer columns m-0">
         <div class="has-text-right column">
             <a href="#">
@@ -105,6 +280,7 @@
             </ul>
         </div>
     </footer>
+    <!-- END -->
 </body>
 
 </html>
